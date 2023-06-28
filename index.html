@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hitung Minggu, Bulan, dan Tahun yang Lalu</title>
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body class="bg-gray-100 font-poppins">
+        <div class="container mx-auto px-4 py-8">
+            <h1 class="text-3xl mb-8 text-center">Hitung Hari, Bulan, dan Tahun yang Lalu</h1>
+
+            <div class="flex flex-wrap justify-center -mx-4">
+                <div class="w-full md:w-1/3 px-4 mb-8">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <label class="block mb-2 text-gray-700" for="inputWeeks">Masukkan minggu yang lalu:</label>
+                        <input class="border border-gray-300 px-3 py-2 rounded w-full" type="number" id="inputWeeks" />
+                        <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded mt-4 w-full" onclick="calculateDays()">Hitung</button>
+                        <div id="resultDays" class="result font-poppins mt-4"></div>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/3 px-4 mb-8">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <label class="block mb-2 text-gray-700" for="inputMonths">Masukkan bulan yang lalu:</label>
+                        <input class="border border-gray-300 px-3 py-2 rounded w-full" type="number" id="inputMonths" />
+                        <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded mt-4 w-full" onclick="calculateMonths()">Hitung</button>
+                        <div id="resultMonths" class="result font-poppins mt-4"></div>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/3 px-4 mb-8">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <label class="block mb-2 text-gray-700" for="inputYears">Masukkan tahun yang lalu:</label>
+                        <input class="border border-gray-300 px-3 py-2 rounded w-full" type="number" id="inputYears" />
+                        <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded mt-4 w-full" onclick="calculateYears()">Hitung</button>
+                        <div id="resultYears" class="result font-poppins mt-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/dayjs/locale/id.js"></script>
+    </body>
+</html>
